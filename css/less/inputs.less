@@ -1,0 +1,353 @@
+/* ----------------------------------- *\
+			inputs elements styles
+\* ----------------------------------- */
+.form-input {
+    height: 44px;
+    border: 1px solid #9B959F;
+    border-radius: 3px;
+    padding: 0 10px 0 14px;
+    font-size: 14px;
+    color: var(--clr-base);
+    background-color: #fff;
+}
+.form-input-search {
+    padding-left: 54px;
+    background-image: url(../img/icons/search.svg);
+    background-position: 12px center;
+    background-repeat: no-repeat;
+    background-size: 24px auto;
+}
+textarea.form-input {
+
+}
+select.form-input {
+    display: block;
+    width: 100%;
+    padding-right: 30px;
+    background-image: url(../img/icons/arrow-toggle.svg);
+    background-position: right 20px center;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    appearance: none!important;
+    line-height: 1em;
+    text-indent: 0.01px;
+    text-overflow: '';
+    outline: none;
+    &.form-input-clear {
+        height: auto;
+        border: none;
+        min-height: 0;
+        border-radius: 0;
+        box-shadow: none;
+        width: auto;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1em;
+        line-height: inherit;
+        padding: 0 16px 0 0;
+        color: inherit;
+        font-weight: bold;
+        background-image: url(../img/icons/arrow-select.png);
+        background-size: 8px auto;
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+}
+select::-ms-expand {
+    display: none;
+}
+//   <select class="form-input form-input-line" required>
+//       <option value="" disabled selected hidden>Выбрать</option>
+//       <option>Пункт списка</option>
+//   </select>
+select.form-input:required:invalid {
+    
+}
+.btn {
+    height: 48px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #fff;
+    padding: 0 30px;
+    border: 1px solid var(--clr-att);
+    background-color: var(--clr-att);
+    &:hover {
+        color: #fff;
+        background-color: var(--clr-att-hover);
+        border-color: var(--clr-att-hover);
+    }
+    &.button-second {
+        &:not(:hover) {
+            background-color: #fff;
+            border-color: #fff;
+            color: #9D81BA;
+        }
+    }
+    &.button-border {
+        &:not(:hover) {
+            background-color: transparent;
+            color: var(--clr-att);
+        }
+        &:hover, &.active {
+            background-color: var(--clr-att);
+            border-color: var(--clr-att);
+            .button-ico {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+    .button-ico {
+        width: 24px;
+        height: 24px;
+        margin: 0 10px;
+        transition: all ease 0.2s;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+.btn-action-ico {
+    min-width: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 40px;height: 40px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    transition: all ease 0.2s;
+    flex-shrink: 0;
+    &:not(.btn) {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+    &.btn {
+        min-width: 0;
+        min-height: 0;
+        padding: 0;
+        display: block;
+    }
+    &:before, &:after, [class*="icon-"], img, svg {
+        display: block;
+        position: absolute;
+        top: 0;bottom: 0;left: 0;right: 0;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+        transition: all ease 0.2s;
+    }
+    img, svg {
+        max-width: 24px;
+        max-height: 24px;
+    }
+    &:before, &:after {
+        content: "";
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 24px auto;
+    }
+    &:hover {
+        text-decoration: none;
+        &:not(.btn) {
+            background: none;
+            box-shadow: none;
+        }
+    }
+    &.ico-arrow {
+        z-index: 20;
+        cursor: pointer;
+        &:before {
+            background-image: url(../img/icons/arrow-slider.svg);
+            background-size: 32px auto;
+        }
+        &:hover {
+        }
+        &.slick-disabled {
+            opacity: 0.8;
+            pointer-events: none;
+        }
+    }
+    &.ico-arrow-prev {
+        &:before {
+            .t-rotate(180deg);
+        }
+    }
+    &.ico-catalog-menu {
+        &:before {
+            background-image: url(../img/icons/menu-cat.svg);
+        }
+    }
+    &.ico-close, &.ico-del {
+        &:before {
+            background-image: url(../img/icons/close.svg);
+        }
+    }
+    &.ico-menu {
+        border-radius: 10px 10px 0 0;
+        &:after, &:before {
+            width: 20px;
+            height: 14px;
+            border-top: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            margin: -7px 0 0 -10px;
+            top: 50%;
+            left: 50%;
+            right: auto;
+            bottom: auto;
+        }
+        &:before {
+            height: 2px;
+            margin-top: -1px;
+            border-top: none;
+        }
+        &.active {
+            background-color: #fff;
+            &:after {
+                height: 2px;
+                margin-top: -1px;
+                border-top: none;
+                .t-rotate(-45deg);
+                border-color: var(--clr-base);
+            }
+            &:before {
+                .t-rotate(45deg);
+                border-color: var(--clr-base);
+            }
+        }
+    }
+    &.button-soc, &.button-message {
+        &:hover {
+            opacity: 0.8;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+.btn-menu-catalog {
+    display: flex;
+    position: relative;
+    min-height: 66px;
+    align-items: center;
+    padding: 10px 40px 10px 76px;
+    box-shadow: 0px 0px 15px rgba(180, 180, 180, 0.11);
+    border-radius: 8px;
+    overflow: hidden;
+    color: #342E37;
+    transition: all ease 0.2s;
+    border: 1px solid #fff;
+    &:hover, &.active {
+        background: rgba(248, 236, 251, 0.65);
+        border: 1px solid #FFEEF7;
+        box-shadow: 0px 0px 15px rgba(180, 180, 180, 0.11);
+        color: #D978AC;
+        .button-ico {
+            background-color: #D978AC;
+        }
+    }
+    &:before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        background: url(../img/icons/arrow-menu.svg) center no-repeat;
+        background-size: 100% auto;
+        top: 50%;
+        right: 22px;
+        margin: -12px -12px 0 0;
+    }
+    .button-title {
+        display: block;
+        width: 100%;
+        flex-shrink: 0;
+    }
+    .button-ico {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background-color: #9D81BA;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        margin-top: -23px;
+        transition: all ease 0.2s;
+    }
+}
+.btn-action-more {
+    color: var(--clr-base);
+    padding: 0 22px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background: url(../img/icons/arrow-more.svg) center no-repeat;
+        background-size: 100% auto;
+        top: 50%;
+        right: 0;
+        margin-top: -10px;
+    }
+    .button-title {
+        display: inline;
+        border-bottom: 1px solid;
+    }
+    &:hover {
+        color: var(--clr-base);
+        .button-title {
+            border-bottom: none;
+        }
+    }
+}
+.btn-action-sort {
+    color: inherit;
+    display: inline-block;
+    position: relative;
+    padding: 0 24px 0 0;
+    &:before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        background: url(../img/icons/arrow-menu.svg) center no-repeat;
+        background-size: 100% auto;
+        top: 50%;
+        right: 0;
+        margin-top: -14px;
+        .t-rotate(-90deg);
+    }
+    &.sort-down {
+        &:before {
+            .t-rotate(90deg);
+            margin-top: -12px;
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .btn-action-more {
+        padding-right: 32px;
+        &:before {
+            height: 24px;
+            width: 24px;
+            margin-top: -12px;
+        }
+    }
+}

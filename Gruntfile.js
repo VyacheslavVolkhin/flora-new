@@ -1,7 +1,6 @@
 module.exports = function (grunt) {
-    /*const mozjpeg = require('imagemin-mozjpeg');*/
     grunt.initConfig({
-
+        pkg: grunt.file.readJSON('package.json'),
         fixturesPath: "_includes",
 
 
@@ -16,6 +15,7 @@ module.exports = function (grunt) {
                     sections: {
                         scripts: '<%= fixturesPath %>/**/scripts.html',
                         head: '<%= fixturesPath %>/**/head.html',
+                        headerempty: '<%= fixturesPath %>/**/headerempty.html',
                         header: '<%= fixturesPath %>/**/header.html',
                         footer: '<%= fixturesPath %>/**/footer.html',
                     },
@@ -129,6 +129,27 @@ module.exports = function (grunt) {
             }
         },
 
+        /*uglify: {
+            tgJS: {
+                files: {
+                    'js/min/app.min.js': ['js/jquery.min.js', 'js/!*.js', '!js/scripts.js'],
+                    'js/min/scripts.min.js': ['js/scripts.js'],
+                },
+            },
+        },*/
+
+        /*cssmin: {
+            options: {
+                mergeIntoShorthands: false,
+                roundingPrecision: -1
+            },
+            target: {
+                files: {
+                    'css/min/app.min.css': ['css/reset.css', 'css/!*.css', '!css/style.min.css', '!css/style.css'],
+                }
+            }
+        },*/
+
 
 
         watch: {
@@ -147,11 +168,21 @@ module.exports = function (grunt) {
                     nospawn: true
                 }
             },
+            /*js: {
+                files: ['js/!*.js'],
+                tasks: ['uglify'],
+            },
+            css: {
+                files: ['css/!*.css'],
+                tasks: ['cssmin'],
+            },*/
         }
     });
 
+    /*grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');*/
     require('load-grunt-tasks')(grunt);
     require('postcss-plugin')({});
 
-    grunt.registerTask('default', ['watch'], ['less'], ['sprite'],  ['htmlbuild'], ['postcss'], ['imagemin']);
+    grunt.registerTask('default', ['watch'], ['less'], ['sprite'],  ['htmlbuild'], ['postcss'], ['imagemin'] );
 };

@@ -1,27 +1,44 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="number"],
-input[type="range"],
-input[type="search"],
-input[type="tel"],
-input[type="url"] {
-	
-}
-textarea {
-	height: 100px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	resize: none;
-}
-.btn,
-button,
-input[type="submit"] {
-	
+.frm-field-input {
+    position: relative;
+    .form-input {
+        border: 1px solid #9B959F;
+        border-radius: 3px;
+        background-color: #fff;
+        height: 53px;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 22px 10px 10px 14px;
+        color: var(--clr-base);
+    }
+    textarea.form-input {
+        height: 140px;
+        padding-top: 30px;
+    }
+    select.form-input {
+        padding-right: 40px;
+        background-position: right 8px bottom 8px;
+    }
+    .field-title {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 10px 10px 0 15px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-transform: uppercase;
+        font-size: 10px;
+        line-height: 1.25;
+        letter-spacing: 0.015em;
+        color: #9B959F;
+        font-weight: 400;
+        pointer-events: none;
+    }
 }
 .frm-row,
 .frm-field,
@@ -30,6 +47,59 @@ input[type="submit"] {
     flex-wrap: wrap;
 	position: relative;
 	line-height: 1;
+}
+.frm-field {
+    display: block;
+    width: 100%;
+}
+.frm-field-counter {
+    width: 162px;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid #9B959F;
+    position: relative;
+    line-height: 1;
+    padding: 0 37px;
+    .btn-plus, .btn-minus {
+        width: 37px;
+        height: 46px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-right: 1px solid #9B959F;
+        &:after, &:before {
+            content: "";
+            display: block;
+            width: 8px;
+            height: 2px;
+            background-color: #9B959F;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -1px 0 0 -4px;
+        }
+    }
+    .btn-plus {
+        left: auto;
+        right: 0;
+        border-right: none;
+        border-left: 1px solid #9B959F;
+        &:before {
+            .t-rotate(90deg);
+        }
+    }
+    .form-input {
+        height: 46px;
+        border-radius: 0;
+        padding: 0;
+        border: none;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.75px;
+        text-transform: uppercase;
+        color: #9B959F;
+    }
 }
 .frm-select {
 	position: relative;
@@ -55,4 +125,46 @@ input[type="submit"] {
             position: absolute;
         }
 	}
+}
+
+.frm-select {
+    input {
+        &:checked {
+            &~label {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    label {
+        line-height: 24px;
+        padding: 0 0 0 39px;
+        min-height: 24px;
+        &:before {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            margin-top: -12px;
+            top: 50%;
+            left: 0;
+            border: 1px solid #E5E5E5;
+        }
+        &:after {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            margin-top: -12px;
+            top: 50%;
+            left: 0;
+            opacity: 0;
+            background: url(../img/icons/chk.svg) center no-repeat;
+            background-size: 24px auto;
+        }
+    }
+    a {
+        &:not(:hover) {
+            color: inherit;
+        }
+    }
 }

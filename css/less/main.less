@@ -1,9 +1,13 @@
 :root {
-	--clr-base: #000;
-	--clr-att: #f00;
+	--clr-base: #000000;
+	--clr-att: #9D81BA;
+	--clr-att-hover: #c8a4ed;
+	--clr-light: #e4e4e;
 
-	--min: 320px;
-	--max: 1200px;
+	--min: 360px;
+	--max: 1500px;
+    
+    --paddingContainer: 10px;
 
 	font-size: 10px;
 }
@@ -13,15 +17,22 @@
 .elm-hidden {
 	display: none;
 }
+.ft {
+    font-family: 'Oswald', sans-serif;
+}
 /* ----------------------------------- *\
 			main styles
 \* ----------------------------------- */
 body {
-	color: var(--clr-base, #000);
-	background: #fff;
+	color: var(--clr-base);
+	background: #F8F8F7;
+    font-size: 16px;
+    line-height: 20/16;
+    letter-spacing: 0.01em;
 }
-p, ul, ol {
+p, ul, ol, table, blockquote, .bq-text {
 	position: relative;
+    margin-bottom: 20/16em;
 	img {
 		max-width: 100%;
 	}
@@ -29,25 +40,82 @@ p, ul, ol {
 		margin-bottom: 0 !important;
 	}
 }
-
+.list-color-second {
+    li {
+        &:before {
+            background-color: #D978AC;
+        }
+    }
+}
 li {
 	position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &:before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #9D81BA;
+        position: absolute;
+        left: 0;
+        top: 0.62em;
+        margin-top: -6px;
+    }
+}
+ol {
+    counter-reset: li; 
+    list-style: none;
+    li {
+    	position: relative;
+        padding-left: 34px;
+    	&:before {
+    		content: counter(li); 
+			counter-increment: li; 
+            display: block;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #D978AC;
+            text-align: center;
+            line-height: 24px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #fff;
+    	}
+        &:nth-child(9)~li:before {
+            content: counter(li) '.';
+        }
+    }
 }
 a {
-	text-decoration: none;
-	color: var(--clr-att, #f00);
-	&:hover {
-		text-decoration: none;
-		color: var(--clr-att, #f00);
-	}
+    text-decoration: none;
+    color: var(--clr-att);
+    &:hover {
+        text-decoration: none;
+        color: var(--clr-att-hover);
+    }
 }
 a.link-main, .link-main {
-	text-decoration: none;
-	border-bottom: 1px solid;
-	&:hover {
-		border-bottom: none;
-	}
+    text-decoration: none;
+    border-bottom: 1px solid;
+    &:hover {
+    }
 }
+.link-phone {
+    white-space: nowrap;
+}
+.side-title,
+.page-title,
 h1, .h1-title,
 h2, .h2-title,
 h3, .h3-title,
@@ -56,7 +124,82 @@ h5, .h5-title,
 h6, .h6-title {
 	display: block;
 	position: relative;
+    font-weight: bold;
+    margin: 1em 0;
     &:first-child {
         margin-top: 0;
+    }
+}
+.h1-title, h1, .h2-title, h2, h3, .h3-title, h4, .h4-title, .side-title, .page-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    color: #342E37;
+}
+.page-title {
+    margin-bottom: 15px;
+}
+.side-title {
+    margin-bottom: 12px;
+}
+.h3-title, h3 {
+    
+}
+.text-att, .title-att {
+    color: var(--clr-att);
+}
+.text-light, .title-light {
+    color: var(--clr-light);
+}
+.text-center, .title-center {
+    text-align: center;
+}
+@media (max-width: 1399px) {
+    :root {
+        font-size: 9.5px;
+    }
+}
+@media (max-width: 1199px) {
+    :root {
+        font-size: 9px;
+    }
+}
+@media (max-width: 1023px) {
+    :root {
+        font-size: 8px;
+    }
+}
+@media (max-width: 767px) {
+    :root {
+        font-size: 7px;
+    }
+}
+@media (min-width: 1024px) {
+    :root {
+        --paddingContainer: 30px;
+    }
+    .page-title {
+        font-size: 3.4rem;
+        &.title-large {
+            font-size: 4.8rem;
+        }
+    }
+    .h1-title, h1 {
+        font-size: 4.8rem;
+        margin: 30px 0;
+    }
+    .h2-title, h2 {
+        font-size: 3.4rem;
+        margin: 30px 0;
+    }
+    .h3-title, h3 {
+        margin: 10px 0;
+        font-size: 2.4rem;
+    }
+}
+@media (min-width: 1400px) {
+    :root {
+        --paddingContainer: 45px;
     }
 }
