@@ -3,6 +3,9 @@
 \* ----------------------------------- */
 .order-box {
     margin-bottom: 15px;
+    .frm-content[data-content].active {
+        display: none;
+    }
     .section-wrap {
         margin-bottom: 5px;
     }
@@ -47,6 +50,9 @@
     .field-text {
         font-size: 14px;
         line-height: 1.25;
+    }
+    select.form-input[disabled] {
+        background-image: none;
     }
 }
 .order-actions-box,

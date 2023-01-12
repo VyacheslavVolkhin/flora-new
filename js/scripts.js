@@ -21,6 +21,30 @@ $(document).ready(function(){
 	};
 
 
+    //content toggle action
+    $('input[data-content]').each(function () {
+        if ($(this).is(':checked')) {
+            let selectContent = $(this).attr('data-content');
+            $('.frm-content[data-content="' + selectContent + '"]').addClass('active');
+        }
+    })
+    $('input[data-content]').on('click', function () {
+        $('.frm-content.active').removeClass('active');
+        $('input[data-content]').each(function () {
+            if ($(this).is(':checked')) {
+                let selectContent = $(this).attr('data-content');
+                $('.frm-content[data-content="' + selectContent + '"]').addClass('active');
+            }
+        })
+    })
+    $('.btn[data-content]').on('click', function () {
+        let dataContent = $(this).attr('data-content');
+        $(this).attr('disabled', 'disabled');
+        $('.frm-content[data-content="' + dataContent + '"]').slideDown(200);
+        return false;
+    })
+
+
     //frm counter   
     $('.js-counter .js-button-counter-minus').on('click', function () {
         var cnt = $(this).parents('.js-counter').find('.js-input-counter').val();

@@ -63,12 +63,8 @@
 										<div class="frm-field">
 											<div class="frm-field-input">
 												<div class="field-title">Способ доставки*</div>
-												<select class="form-input" required>
-													<option selected disabled hidden value=""></option><!--placeholder-->
-													<option>Пункт списка</option>
-													<option>Пункт списка</option>
-													<option>Пункт списка</option>
-													<option>Пункт списка</option>
+												<select class="form-input" required disabled>
+													<option>Доставка курьером</option>
 												</select>
 											</div>
 										</div>
@@ -204,12 +200,12 @@
 									<div class="frm-row">
 										<div class="frm-field">
 											<div class="frm-select">
-												<input type="checkbox" id="chk02">
-												<label for="chk02">Получатель другой человек</label>
+												<input type="checkbox" id="chk02" data-content="s01">
+												<label for="chk02">Я буду получателем букета</label>
 											</div>
 										</div>
 									</div>
-									<div class="frm-row">
+									<div class="frm-row frm-content" data-content="s01">
 										<div class="frm-field field-half">
 											<div class="frm-field-input">
 												<div class="field-title">Имя*</div>

@@ -1619,6 +1619,9 @@ body {
 .order-box {
   margin-bottom: 15px;
 }
+.order-box .frm-content[data-content].active {
+  display: none;
+}
 .order-box .section-wrap {
   margin-bottom: 5px;
 }
@@ -1661,6 +1664,9 @@ body {
 .order-box .field-text {
   font-size: 14px;
   line-height: 1.25;
+}
+.order-box select.form-input[disabled] {
+  background-image: none;
 }
 .order-actions-box,
 .cart-actions-box {
