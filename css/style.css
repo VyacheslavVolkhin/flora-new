@@ -3221,19 +3221,8 @@ select::-ms-expand {
   letter-spacing: 0.015em;
   color: #9B959F;
   font-weight: 400;
+  z-index: 3;
   pointer-events: none;
-}
-.frm-field-input [placeholder]::-webkit-input-placeholder {
-  color: #9b959f;
-}
-.frm-field-input [placeholder]:-moz-placeholder {
-  color: #9b959f;
-}
-.frm-field-input [placeholder]::-moz-placeholder {
-  color: #9b959f;
-}
-.frm-field-input [placeholder]:-ms-input-placeholder {
-  color: #9b959f;
 }
 .frm-row,
 .frm-field,
