@@ -1622,6 +1622,13 @@ body {
 .order-box .frm-content[data-content].active {
   display: none;
 }
+.order-box .frm-content-select {
+  display: none;
+  animation: fadein ease 0.2s;
+}
+.order-box .frm-content-select.active {
+  display: block;
+}
 .order-box .section-wrap {
   margin-bottom: 5px;
 }

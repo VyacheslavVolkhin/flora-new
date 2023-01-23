@@ -22,6 +22,15 @@ $(document).ready(function(){
 
 
     //content toggle action
+    $('select.form-select-content').each(function() {
+        let sVal = $(this).val();
+        $('.frm-content-select[data-content="'+sVal+'"]').addClass('active');
+    })
+    $('select.form-select-content').on('change', function() {
+        $('.frm-content-select[data-content]').removeClass('active');
+        let sVal = $(this).val();
+        $('.frm-content-select[data-content="'+sVal+'"]').addClass('active');
+    })
     $('input[data-content]').each(function () {
         if ($(this).is(':checked')) {
             let selectContent = $(this).attr('data-content');
@@ -75,7 +84,9 @@ $(document).ready(function(){
     
     
     //swipebox
-    $('[data-swipebox]').swipebox();
+    if (!!$('[data-swipebox]').offset()) {
+        $('[data-swipebox]').swipebox();
+    }
 
 
     //mobile menu

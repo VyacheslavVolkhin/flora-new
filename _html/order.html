@@ -63,94 +63,134 @@
 										<div class="frm-field">
 											<div class="frm-field-input">
 												<div class="field-title">Способ доставки*</div>
-												<select class="form-input" required disabled>
-													<option>Доставка курьером</option>
+												<select class="form-input form-select-content" required>
+													<option value="del01" selected>Доставка курьером</option>
+													<option value="del02">Самовывоз</option>
 												</select>
 											</div>
 										</div>
 									</div>
-									<div class="frm-row">
-										<div class="frm-field field-half">
-											<div class="frm-field-input">
-												<div class="field-title">Дата*</div>
-												<select class="form-input" required>
-													<option selected disabled hidden value=""></option><!--placeholder-->
-													<option>Пункт списка</option>
-													<option>Пункт списка</option>
-													<option>Пункт списка</option>
-													<option>Пункт списка</option>
-												</select>
+									<!--delivery 01-->
+									<div class="frm-content-select" data-content="del01">
+										<div class="frm-row">
+											<div class="frm-field field-half">
+												<div class="frm-field-input">
+													<div class="field-title">Дата*</div>
+													<select class="form-input" required>
+														<option selected disabled hidden value=""></option><!--placeholder-->
+														<option>Пункт списка</option>
+														<option>Пункт списка</option>
+														<option>Пункт списка</option>
+														<option>Пункт списка</option>
+													</select>
+												</div>
+											</div>
+											<div class="frm-field field-half">
+												<div class="frm-field-input">
+													<div class="field-title">Время*</div>
+													<select class="form-input" required>
+														<option selected disabled hidden value=""></option><!--placeholder-->
+														<option>Пункт списка</option>
+														<option>Пункт списка</option>
+														<option>Пункт списка</option>
+														<option>Пункт списка</option>
+													</select>
+												</div>
 											</div>
 										</div>
-										<div class="frm-field field-half">
-											<div class="frm-field-input">
-												<div class="field-title">Время*</div>
-												<select class="form-input" required>
-													<option selected disabled hidden value=""></option><!--placeholder-->
-													<option>Пункт списка</option>
-													<option>Пункт списка</option>
-													<option>Пункт списка</option>
-													<option>Пункт списка</option>
-												</select>
+										<div class="frm-row">
+											<div class="frm-field">
+												<div class="frm-field-input">
+													<div class="field-title">населенный пункт*</div>
+													<input type="text" class="form-input" value="">
+												</div>
+											</div>
+										</div>
+										<div class="frm-row">
+											<div class="frm-field">
+												<div class="frm-field-input">
+													<div class="field-title">Улица*</div>
+													<input type="text" class="form-input" value="">
+												</div>
+											</div>
+										</div>
+										<div class="frm-row">
+											<div class="frm-field field-five">
+												<div class="frm-field-input">
+													<div class="field-title">Номер Дома*</div>
+													<input type="text" class="form-input" value="">
+												</div>
+											</div>
+											<div class="frm-field field-five">
+												<div class="frm-field-input">
+													<div class="field-title">Квартира*</div>
+													<input type="text" class="form-input" value="">
+												</div>
+											</div>
+											<div class="frm-field field-five">
+												<div class="frm-field-input">
+													<div class="field-title">Подъезд</div>
+													<input type="text" class="form-input" value="">
+												</div>
+											</div>
+											<div class="frm-field field-five">
+												<div class="frm-field-input">
+													<div class="field-title">Этаж</div>
+													<input type="text" class="form-input" value="">
+												</div>
+											</div>
+											<div class="frm-field field-five">
+												<div class="frm-field-input">
+													<div class="field-title">Код домофона</div>
+													<input type="text" class="form-input" value="">
+												</div>
+											</div>
+										</div>
+										<div class="frm-row">
+											<div class="frm-field">
+												<div class="frm-select">
+													<input type="checkbox" id="chk01">
+													<label for="chk01">Связаться с получателем для уточнения адреса</label>
+												</div>
 											</div>
 										</div>
 									</div>
-									<div class="frm-row">
-										<div class="frm-field">
-											<div class="frm-field-input">
-												<div class="field-title">населенный пункт*</div>
-												<input type="text" class="form-input" value="">
+									<!--/delivery 01-->
+									<!--delivery 02-->
+									<div class="frm-content-select" data-content="del02">
+										<div class="frm-row">
+											<div class="frm-field field-half">
+												<div class="frm-field-input">
+													<div class="field-title">Дата*</div>
+													<select class="form-input" required>
+														<option selected disabled hidden value=""></option><!--placeholder-->
+														<option>Пункт списка</option>
+														<option>Пункт списка</option>
+														<option>Пункт списка</option>
+														<option>Пункт списка</option>
+													</select>
+												</div>
+											</div>
+											<div class="frm-field field-half">
+												<div class="frm-field-input">
+													<div class="field-title">Время*</div>
+													<select class="form-input" required>
+														<option selected disabled hidden value=""></option><!--placeholder-->
+														<option>Пункт списка</option>
+														<option>Пункт списка</option>
+														<option>Пункт списка</option>
+														<option>Пункт списка</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="frm-row">
+											<div class="frm-field field-text">
+												<p>Вы можете забрать ваш товар по адресу: <b>МО, г. Подольск, ул. Литейная д. 46 </b></p>
 											</div>
 										</div>
 									</div>
-									<div class="frm-row">
-										<div class="frm-field">
-											<div class="frm-field-input">
-												<div class="field-title">Улица*</div>
-												<input type="text" class="form-input" value="">
-											</div>
-										</div>
-									</div>
-									<div class="frm-row">
-										<div class="frm-field field-five">
-											<div class="frm-field-input">
-												<div class="field-title">Номер Дома*</div>
-												<input type="text" class="form-input" value="">
-											</div>
-										</div>
-										<div class="frm-field field-five">
-											<div class="frm-field-input">
-												<div class="field-title">Квартира*</div>
-												<input type="text" class="form-input" value="">
-											</div>
-										</div>
-										<div class="frm-field field-five">
-											<div class="frm-field-input">
-												<div class="field-title">Подъезд</div>
-												<input type="text" class="form-input" value="">
-											</div>
-										</div>
-										<div class="frm-field field-five">
-											<div class="frm-field-input">
-												<div class="field-title">Этаж</div>
-												<input type="text" class="form-input" value="">
-											</div>
-										</div>
-										<div class="frm-field field-five">
-											<div class="frm-field-input">
-												<div class="field-title">Код домофона</div>
-												<input type="text" class="form-input" value="">
-											</div>
-										</div>
-									</div>
-									<div class="frm-row">
-										<div class="frm-field">
-											<div class="frm-select">
-												<input type="checkbox" id="chk01">
-												<label for="chk01">Связаться с получателем для уточнения адреса</label>
-											</div>
-										</div>
-									</div>
+									<!--/delivery 02-->
 								</div>
 							</div>
 							<!--/section-wrap-->
@@ -256,8 +296,8 @@
 											<div class="frm-field-input">
 												<div class="field-title">Выберите способ оплаты*</div>
 												<select class="form-input" required>
-													<option selected disabled hidden value=""></option><!--placeholder-->
-													<option>Пункт списка</option>
+													<option disabled hidden value=""></option><!--placeholder-->
+													<option selected>Оплата банковской картой</option>
 													<option>Пункт списка</option>
 													<option>Пункт списка</option>
 													<option>Пункт списка</option>
