@@ -1622,6 +1622,12 @@ body {
 .order-box .frm-content[data-content].active {
   display: none;
 }
+.order-box .frm-content.c-inver[data-content] {
+  display: none;
+}
+.order-box .frm-content.c-inver[data-content].active {
+  display: block;
+}
 .order-box .frm-content-select {
   display: none;
   animation: fadein ease 0.2s;

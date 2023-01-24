@@ -6,6 +6,12 @@
     .frm-content[data-content].active {
         display: none;
     }
+    .frm-content.c-inver[data-content] {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
     .frm-content-select {
         display: none;
         animation: fadein ease 0.2s;
