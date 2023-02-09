@@ -782,6 +782,36 @@
         .item-tile-catalog {
             width: 180px;
         }
+        .slick-list {
+            margin-left: calc(var(--paddingContainer) * -1);
+            margin-right: calc(var(--paddingContainer) * -1);
+            padding-left: var(--paddingContainer);
+            padding-right: var(--paddingContainer);
+            display: block;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            transform: none !important;
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+        }
+        
+        .slick-track {
+            width: auto !important;
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            transform: none !important;
+            &:before, &:after {
+                display: none;
+            }
+            .slick-slide {
+                float: none;
+                flex-shrink: 0;
+            }
+        }
     }
     .search-box {
         .filter-wrap {

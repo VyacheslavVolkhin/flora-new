@@ -2434,6 +2434,39 @@ body {
   .catalog-slider-box .item-tile-catalog {
     width: 180px;
   }
+  .catalog-slider-box .slick-list {
+    margin-left: calc(var(--paddingContainer) * -1);
+    margin-right: calc(var(--paddingContainer) * -1);
+    padding-left: var(--paddingContainer);
+    padding-right: var(--paddingContainer);
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    transform: none !important;
+  }
+  .catalog-slider-box .slick-list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .catalog-slider-box .slick-track {
+    width: auto !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: nowrap !important;
+        flex-wrap: nowrap !important;
+    transform: none !important;
+  }
+  .catalog-slider-box .slick-track:before,
+  .catalog-slider-box .slick-track:after {
+    display: none;
+  }
+  .catalog-slider-box .slick-track .slick-slide {
+    float: none;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
   .search-box .filter-wrap .btn {
     width: 38px;
     height: 38px;
