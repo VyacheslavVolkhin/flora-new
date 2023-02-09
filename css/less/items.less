@@ -398,6 +398,20 @@
     }
 }
 @media (max-width: 1023px) {
+    .item-tile-catalog {
+        background-color: #f00;
+        &:hover {
+            color: var(--clr-base);
+            .tile-title {
+                color: var(--clr-att);
+            }
+            .tile-photo {
+                img {
+                    .t-scale(1.1);
+                }
+            }
+        }
+    }
     .elm-row {
         margin-bottom: 5px;
         .row-value {
