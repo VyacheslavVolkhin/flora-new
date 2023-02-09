@@ -1149,12 +1149,6 @@ body {
 .item-tile-catalog:hover {
   color: var(--clr-base);
 }
-.item-tile-catalog:hover .tile-title {
-  color: var(--clr-att);
-}
-.item-tile-catalog:hover .tile-photo img {
-  transform: scale(1.1);
-}
 .item-tile-catalog .tile-photo-wrap {
   margin-bottom: 10px;
 }
@@ -1531,6 +1525,15 @@ body {
   }
   .item-tile-catalog {
     font-size: 16px;
+  }
+  .item-tile-catalog:hover {
+    color: var(--clr-base);
+  }
+  .item-tile-catalog:hover .tile-title {
+    color: var(--clr-att);
+  }
+  .item-tile-catalog:hover .tile-photo img {
+    transform: scale(1.1);
   }
   .item-tile-catalog .tile-photo-wrap {
     margin-bottom: 15px;

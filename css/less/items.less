@@ -182,14 +182,6 @@
     line-height: 1.25;
     &:hover {
         color: var(--clr-base);
-        .tile-title {
-            color: var(--clr-att);
-        }
-        .tile-photo {
-            img {
-                .t-scale(1.1);
-            }
-        }
     }
     .tile-photo-wrap {
         margin-bottom: 10px;
@@ -518,6 +510,17 @@
     }
     .item-tile-catalog {
         font-size: 16px;
+        &:hover {
+            color: var(--clr-base);
+            .tile-title {
+                color: var(--clr-att);
+            }
+            .tile-photo {
+                img {
+                    .t-scale(1.1);
+                }
+            }
+        }
         .tile-photo-wrap {
             margin-bottom: 15px;
         }
