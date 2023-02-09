@@ -182,6 +182,14 @@
     line-height: 1.25;
     &:hover {
         color: var(--clr-base);
+        .tile-title {
+            color: var(--clr-att);
+        }
+        .tile-photo {
+            img {
+                .t-scale(1.1);
+            }
+        }
     }
     .tile-photo-wrap {
         margin-bottom: 10px;
@@ -398,20 +406,6 @@
     }
 }
 @media (max-width: 1023px) {
-    .item-tile-catalog {
-        background-color: #f00;
-        &:hover {
-            color: var(--clr-base);
-            .tile-title {
-                color: var(--clr-att);
-            }
-            .tile-photo {
-                img {
-                    .t-scale(1.1);
-                }
-            }
-        }
-    }
     .elm-row {
         margin-bottom: 5px;
         .row-value {
@@ -524,17 +518,6 @@
     }
     .item-tile-catalog {
         font-size: 16px;
-        &:hover {
-            color: var(--clr-base);
-            .tile-title {
-                color: var(--clr-att);
-            }
-            .tile-photo {
-                img {
-                    .t-scale(1.1);
-                }
-            }
-        }
         .tile-photo-wrap {
             margin-bottom: 15px;
         }
