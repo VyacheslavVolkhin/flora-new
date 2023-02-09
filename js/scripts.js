@@ -233,7 +233,6 @@ $(document).ready(function(){
                     breakpoint: 1024,
                     settings: {
                         variableWidth: true,
-                        swipe: false,
                         adaptiveHeight: false,
                         prevArrow: false,
                         nextArrow: false,
